@@ -23,8 +23,30 @@ Ex-  zero division of a program
 4. Execute the ISR
 5. Resume previous program
 
-## Some examples for interruptions
+### Some examples for interruptions
 1. Keyboard input
 2. Mouse moment
 3. Disk I/O completion interrupt
 4. Timer interrupt
+   
+## Storage structure
+
+1. Main memory –only large storage media that the CPU can access directly
+```
+• Random access
+• Typically volatile
+• Typicallyrandom-accessmemoryin the form of Dynamic Random-access Memory (DRAM)
+```
+
+2. Secondary storage –extension of main memory that provides large nonvolatile storage capacity
+
+3. Hard Disk Drives (HDD) –rigid metal or glass platters covered with magnetic recording material
+```
+• Disk surface is logically divided intotracks, which are subdivided into sectors
+• The disk controller determines the logical interaction between the device and the computer
+```
+4. Non-volatile memory(NVM)devices–faster than hard disks, nonvolatile
+```
+• Various technologies
+• Becoming more popular as capacity and performance increases, price drops
+``` 
