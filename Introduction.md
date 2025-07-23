@@ -31,22 +31,34 @@ Ex-  zero division of a program
    
 ## Storage structure
 
-1. Main memory –only large storage media that the CPU can access directly
+1. Main memory    –only large storage media that the CPU can access directly
 ```
 • Random access
 • Typically volatile
-• Typicallyrandom-accessmemoryin the form of Dynamic Random-access Memory (DRAM)
+• Typically random   -accessmemoryin the form of Dynamic Random-access Memory (DRAM)
 ```
 
-2. Secondary storage –extension of main memory that provides large nonvolatile storage capacity
+2. Secondary storage   –extension of main memory that provides large nonvolatile storage capacity
 
-3. Hard Disk Drives (HDD) –rigid metal or glass platters covered with magnetic recording material
+3. Hard Disk Drives (HDD)   –rigid metal or glass platters covered with magnetic recording material
 ```
-• Disk surface is logically divided intotracks, which are subdivided into sectors
+• Disk surface is logically divided into tracks, which are subdivided into sectors
 • The disk controller determines the logical interaction between the device and the computer
 ```
-4. Non-volatile memory(NVM)devices–faster than hard disks, nonvolatile
+4. Non-volatile memory(NVM)devices   –faster than hard disks, nonvolatile
 ```
 • Various technologies
 • Becoming more popular as capacity and performance increases, price drops
-``` 
+```
+## Storage hierarchy
+Hierarchy criterias
+* Speed
+* Volatility
+* Cost
+
+### Caching 
+Caching is the process of storing frequently used data in a faster memory — but not in main memory (RAM). It's actually stored in cache memory, which is even faster than RAM.
+
+### Device Driver (for each device controller to manage I/O) 
+
+Provides uniform interface between controller and kernel
