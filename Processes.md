@@ -146,3 +146,34 @@ Threads-  Lightweight processes run in each tab.
 ```
 ### fork() system call 
 This is used to create a new process by duplicating its parent process
+
+## Inter Process Communication (IPC)
+
+There are two types of processes:
+1. Independent processes
+2. Cooperative processes
+
+Reasons for cooperative processes
+* Information sharing
+* Computation speedup
+* Modularity
+* Convenience
+
+Two models of inter process communication (IPC)
+1. Shared memory
+2. Message passing
+
+
+###Shared memory method
+
+Fastest among IPC methods because processes access the shared data directly in memory rather than sending messages.
+
+### Message passing
+
+Unless using a shared memory this passes messages directly between processes
+
+**What Is Message Passing?**
+Message passing is a communication method where:
+* Processes exchange data via messages.
+* No shared memory is required.
+* Used in distributed systems and when processes are isolated.
