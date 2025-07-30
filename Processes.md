@@ -62,5 +62,13 @@ OS cleans up its resources.
 | **Parent/Child Info**       | Parent and child process IDs (optional)                |
 
 
+## Threads
+
+a thread is a lightweight sub-process:
+  It shares the process's code, data, and resources, but executes independently.
+```
+Processes are heavyweight: fully independent, with their own memory space.
+Threads are lightweight: run within the same process, share memory, and can communicate easily.
+```
 
 
