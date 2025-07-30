@@ -107,3 +107,12 @@ Resource sharing options
 • Parent and children execute concurrently
 • Parent waits until children terminate
 ```
+This processes behave like a tree hierarchy
+
+ Parent and Child Processes
+In systems like UNIX:
+```
+fork() → Creates a new (child) process.
+exec() → Replaces the process memory with a new program.
+Parent and child can execute concurrently or the parent can wait for the child.
+```
