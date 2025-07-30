@@ -20,8 +20,33 @@ The browser program is the same.
 But the OS runs two different processes (each with its own memory and state).
 ```
 **A program can have multiple processes**
+## States of a process
+1. New
+```
+The process is being created.
+OS sets up necessary resources.
+```
 
-
+2. Ready
+```
+The process is waiting to be assigned to a CPU.
+It is ready to run, but the CPU is busy with others
+```
+3. Running
+```
+The process is currently being executed on the CPU.
+Only one process per CPU core can be in this state.
+```
+4. Waiting / Blocked
+```
+The process is waiting for an event (like I/O completion).
+It cannot proceed until the event happens.
+```
+5. Terminated / Exit
+```
+The process has finished execution (successfully or by error).
+OS cleans up its resources.
+```
 
 
 
