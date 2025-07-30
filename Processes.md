@@ -47,8 +47,12 @@ It cannot proceed until the event happens.
 The process has finished execution (successfully or by error).
 OS cleans up its resources.
 ```
+## Process Control Block (PCB)
 
-## 📦 Contents of a Process Control Block (PCB)
+The Process Control Block (PCB) is a data structure maintained by the Operating System (OS) for every process.
+It stores all the information needed to manage a process.
+
+### 📦 Contents of a Process Control Block (PCB)
 
 | 🔢 **Field**                 | 📄 **Description**                                      |
 |-----------------------------|---------------------------------------------------------|
@@ -88,4 +92,18 @@ Stack Pointer
 Process State
 Memory Management Info
 All stored in the Process Control Block (PCB)
+```
+## Process creation
+
+Parent process create children processes, which, in turn create other processes, forming a tree of processes
+Generally, process identified and managed via a process identifier (pid)
+
+Resource sharing options
+```
+• Parent and children share all resources
+• Children share subset of parent’s resources
+• Parent and child share no resources
+▪ Execution options
+• Parent and children execute concurrently
+• Parent waits until children terminate
 ```
