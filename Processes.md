@@ -144,3 +144,5 @@ Program -  Google chrome
 Processes-  Each tab
 Threads-  Lightweight processes run in each tab.
 ```
+### fork() system call 
+This is used to create a new process by duplicating its parent process
