@@ -116,3 +116,24 @@ fork() → Creates a new (child) process.
 exec() → Replaces the process memory with a new program.
 Parent and child can execute concurrently or the parent can wait for the child.
 ```
+## Process transition 
+
+Process executes last statement and then asks the operating system to delete it using the exit() system call.
+• Returns status data from child to parent (via wait())
+• Process’ resources are deallocated by operating system
+
+Parent may terminate the execution of children processes using abort() system call
+
+Parent may terminate the execution of children processes using the abort() system call. Some reasons for doing so:
+  • Child has exceeded allocated resources
+  • Task assigned to child is no longer required
+  • The parent is exiting, and the operating systems does not allow a child to continue if its parent terminates
+
+Some systems terminate all the children when we terminate a process.
+The parent process may wait for the termination of the child process using wait(). But The call returns status information and the pid of the terminated process
+pid = wait(&status); 
+
+```
+If no parent waiting (did not invoke wait()) process is a zombie
+If parent terminated without invoking wait(), process is an orphan
+```
