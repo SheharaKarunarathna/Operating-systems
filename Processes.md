@@ -70,5 +70,22 @@ a thread is a lightweight sub-process:
 Processes are heavyweight: fully independent, with their own memory space.
 Threads are lightweight: run within the same process, share memory, and can communicate easily.
 ```
+## Context switching
 
+Steps in a Context Switch
+1. Save the current process's state to its PCB.
+2. Select the next process from the ready queue.
+3. Load the next process's state from its PCB.
+4. Update the CPU's registers and program counter.
 
+**What is Saved During a Context Switch?**
+
+The context of a process includes:
+```
+Program Counter (PC)
+CPU registers
+Stack Pointer
+Process State
+Memory Management Info
+All stored in the Process Control Block (PCB)
+```
