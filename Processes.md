@@ -48,6 +48,19 @@ The process has finished execution (successfully or by error).
 OS cleans up its resources.
 ```
 
+## 📦 Contents of a Process Control Block (PCB)
+
+| 🔢 **Field**                 | 📄 **Description**                                      |
+|-----------------------------|---------------------------------------------------------|
+| **Process ID (PID)**        | Unique number to identify the process                  |
+| **Process State**           | Current state (e.g., Ready, Running, Waiting)          |
+| **Program Counter**         | Address of the next instruction to execute             |
+| **CPU Registers**           | Contents of all registers (e.g., ACC, PC, SP) — saved/restored during context switches |
+| **Memory Management Info**  | Page tables, segment tables, base/limit registers      |
+| **Accounting Info**         | CPU usage, job priority, time limits, etc.             |
+| **I/O Status Info**         | List of I/O devices allocated, files opened            |
+| **Parent/Child Info**       | Parent and child process IDs (optional)                |
+
 
 
 
