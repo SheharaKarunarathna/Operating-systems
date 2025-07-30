@@ -137,3 +137,10 @@ pid = wait(&status);
 If no parent waiting (did not invoke wait()) process is a zombie
 If parent terminated without invoking wait(), process is an orphan
 ```
+
+## Example for multiprocesses program
+```
+Program -  Google chrome
+Processes-  Each tab
+Threads-  Lightweight processes run in each tab.
+```
