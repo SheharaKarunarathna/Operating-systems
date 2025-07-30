@@ -177,3 +177,19 @@ Message passing is a communication method where:
 * Processes exchange data via messages.
 * No shared memory is required.
 * Used in distributed systems and when processes are isolated.
+
+There are direct communication and indirect communication in message passing 
+In indirect communication we make a mailbox and communicate through that mailbox.
+The keywords we have are send() and recieve().
+
+### Producer-Consumer Problem is a classic example of IPC 
+
+What is the Producer-Consumer Problem?
+Producer: Generates data and puts it into a buffer.
+Consumer: Takes data out of the buffer and processes it.
+Buffer: Shared memory area or queue between the two processes.
+
+The challenge is to:
+Ensure the producer doesn't overwrite buffer slots not yet consumed.
+Ensure the consumer doesn't consume data that hasn't been produced.
+Avoid race conditions (when two processes access the buffer concurrently).
