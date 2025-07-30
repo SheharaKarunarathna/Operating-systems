@@ -164,7 +164,7 @@ Two models of inter process communication (IPC)
 2. Message passing
 
 
-###Shared memory method
+### Shared memory method
 
 Fastest among IPC methods because processes access the shared data directly in memory rather than sending messages.
 
