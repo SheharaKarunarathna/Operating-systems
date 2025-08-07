@@ -201,3 +201,11 @@ If the consumer tries to consume when the buffer is empty, it may read invalid d
 
 4. Data Inconsistency
 Improper access without locks may lead to inconsistent states (e.g., two producers writing to the same slot).
+
+### Bounded buffer solution for the producer consumer problem
+The Bounded Buffer is a specific solution to the Producer-Consumer problem where the shared buffer has a fixed size (bounded). It ensures that:<br>
+* The producer waits if the buffer is full.<br>
+* The consumer waits if the buffer is empty.
+```
+Because the buffer has a limited capacity, say size N. You can't insert more than N items, and you can't consume if it's empty.
+```
