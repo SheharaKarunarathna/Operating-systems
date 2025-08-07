@@ -185,11 +185,19 @@ The keywords we have are send() and recieve().
 ### Producer-Consumer Problem is a classic example of IPC 
 
 What is the Producer-Consumer Problem?
-Producer: Generates data and puts it into a buffer.
-Consumer: Takes data out of the buffer and processes it.
-Buffer: Shared memory area or queue between the two processes.
+* Producer: Generates data and puts it into a buffer.
+* Consumer: Takes data out of the buffer and processes it.
+* Buffer: Shared memory area or queue between the two processes.
 
-The challenge is to:
-Ensure the producer doesn't overwrite buffer slots not yet consumed.
-Ensure the consumer doesn't consume data that hasn't been produced.
-Avoid race conditions (when two processes access the buffer concurrently).
+The challenges are:
+1. Race Conditions
+If both producer and consumer access the buffer at the same time, they may interfere with each other, leading to corrupted data.
+
+2. Overwriting (Buffer Overflow)
+If the producer adds data when the buffer is full, it may overwrite data not yet consumed.
+
+3. Underflow (Reading Empty Buffer)
+If the consumer tries to consume when the buffer is empty, it may read invalid data.
+
+4. Data Inconsistency
+Improper access without locks may lead to inconsistent states (e.g., two producers writing to the same slot).
