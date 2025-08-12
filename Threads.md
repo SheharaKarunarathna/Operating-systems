@@ -27,4 +27,26 @@ Example: Java green threads, POSIX pthread in user mode.
 * More overhead but better CPU utilization — one thread can block without stopping others.
 Example: Windows threads, Linux kernel threads.
 
+## Thread mapping
+
+1. Many-to-One
+
+* Many user threads mapped to one kernel thread.
+
+* Simple, but if one thread blocks, all block; can’t use multiple cores.
+* Example: Early Java green threads.
+
+2. One-to-One
+
+* Each user thread maps to one kernel thread.
+* Allows true parallelism, but thread creation has more overhead.
+Example: Windows threads, Linux pthread (default).
+
+3. Many-to-Many
+
+* Many user threads mapped to many kernel threads (number of kernel threads ≤ number of user threads).
+* Combines flexibility of user threads with benefits of kernel scheduling.
+Example: Older Solaris threads, Windows ThreadPool.
+
+
  
