@@ -209,3 +209,21 @@ The Bounded Buffer is a specific solution to the Producer-Consumer problem where
 ```
 Because the buffer has a limited capacity, say size N. You can't insert more than N items, and you can't consume if it's empty.
 ```
+### Difference between Pipes and Buffers
+```
+1. Pipe
+
+A pipe is an IPC mechanism provided by the OS for communication between processes.
+It connects a producer and a consumer so that data flows from one process to another.
+Can be anonymous (between related processes) or named (FIFO) (between unrelated processes).
+
+Operates in FIFO order.
+Acts like a channel, not just storage.
+
+2. Buffer
+
+A buffer is a temporary memory area used to hold data.
+Can exist inside a pipe, in a file system, or in user space.
+
+Its main purpose is to store data temporarily to handle speed differences between producer and consumer.It does not provide a communication mechanism on its own — just storage.
+```
